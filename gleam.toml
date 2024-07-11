@@ -1,0 +1,10 @@
+name = "recursive"
+version = "1.0.0"
+
+description = "A Fixed-point combinator implementation & utility functions for better DX when using it"
+licences = ["MIT"]
+repository = { type = "github", user = "olian04", repo = "gleam_recursive" }
+gleam = ">= 1.0.0"
+
+[dev-dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
