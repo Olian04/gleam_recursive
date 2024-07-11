@@ -49,66 +49,66 @@ fn memo_sum(a, b, c, d, res, f) {
   }
 }
 
-pub fn fix_test() {
-  recursive.fix(fac)(10)
+pub fn func_test() {
+  recursive.func(fac)(10)
   |> should.equal(3_628_800)
 }
 
-pub fn fix2_test() {
-  recursive.fix2(memo_fac)(10, 1)
+pub fn func2_test() {
+  recursive.func2(memo_fac)(10, 1)
   |> should.equal(3_628_800)
 }
 
-pub fn fix3_test() {
-  recursive.fix3(fib)(9, 1, 0)
+pub fn func3_test() {
+  recursive.func3(fib)(9, 1, 0)
   |> should.equal(55)
 }
 
-pub fn fix4_test() {
-  recursive.fix4(sum)(1, 2, 3, 4)
+pub fn func4_test() {
+  recursive.func4(sum)(1, 2, 3, 4)
   |> should.equal(10)
 }
 
-pub fn fix5_test() {
-  recursive.fix5(memo_sum)(1, 2, 3, 4, 0)
+pub fn func5_test() {
+  recursive.func5(memo_sum)(1, 2, 3, 4, 0)
   |> should.equal(10)
 }
 
-pub fn use_fix_test() {
+pub fn block_test() {
   {
-    use it, f <- recursive.use_fix(10)
+    use it, f <- recursive.block(10)
     fac(it, f)
   }
   |> should.equal(3_628_800)
 }
 
-pub fn use_fix2_test() {
+pub fn block2_test() {
   {
-    use it, res, f <- recursive.use_fix2(10, 1)
+    use it, res, f <- recursive.block2(10, 1)
     memo_fac(it, res, f)
   }
   |> should.equal(3_628_800)
 }
 
-pub fn use_fix3_test() {
+pub fn block3_test() {
   {
-    use it, curr, prev, f <- recursive.use_fix3(9, 1, 0)
+    use it, curr, prev, f <- recursive.block3(9, 1, 0)
     fib(it, curr, prev, f)
   }
   |> should.equal(55)
 }
 
-pub fn use_fix4_test() {
+pub fn block4_test() {
   {
-    use a, b, c, d, f <- recursive.use_fix4(1, 2, 3, 4)
+    use a, b, c, d, f <- recursive.block4(1, 2, 3, 4)
     sum(a, b, c, d, f)
   }
   |> should.equal(10)
 }
 
-pub fn use_fix5_test() {
+pub fn block5_test() {
   {
-    use a, b, c, d, res, f <- recursive.use_fix5(1, 2, 3, 4, 0)
+    use a, b, c, d, res, f <- recursive.block5(1, 2, 3, 4, 0)
     memo_sum(a, b, c, d, res, f)
   }
   |> should.equal(10)

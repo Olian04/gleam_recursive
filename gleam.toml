@@ -1,7 +1,7 @@
 name = "recursive"
-version = "1.0.0"
+version = "2.0.0"
 
-description = "A Fixed-point combinator implementation & utility functions for better DX when using it"
+description = "User friendly Fixed-point combinator functions. Any block or anonymous function can run recursively!"
 licences = ["MIT"]
 repository = { type = "github", user = "olian04", repo = "gleam_recursive" }
 gleam = ">= 1.0.0"
