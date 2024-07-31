@@ -62,7 +62,7 @@ pub fn main() {
    io.debug(fac(10))
 
    // Tail recursive factorial
-   let memo_fac = recursive.func(fn (it, res, f) {
+   let memo_fac = recursive.func2(fn (it, res, f) {
       case it {
         0 -> res
         _ -> f(it - 1, res * it)
@@ -71,7 +71,7 @@ pub fn main() {
    io.debug(fac(10, 1))
 
    // Tail recursive fibonacci
-   let fib = recursive.func(fn (it, curr, prev, f) {
+   let fib = recursive.func3(fn (it, curr, prev, f) {
       case it {
         0 -> curr
         _ -> f(it - 1, curr + prev, curr)
