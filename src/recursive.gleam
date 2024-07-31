@@ -1,6 +1,6 @@
 /// Raw fixed-point combinator.
 /// Not intended to be used standalone
-pub fn rec(f) {
+fn rec(f) {
   f(fn() { rec(f) })
 }
 
